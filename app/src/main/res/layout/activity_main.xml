@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.andreij.tipcalculator.Main">
+
+    <TextView
+        android:id="@+id/textCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Bill:"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"/>
+    <EditText
+        android:id="@+id/editCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textCheck"
+        android:background="@android:color/transparent"
+        android:hint="$0.00"
+        android:textColorHint="@android:color/darker_gray"
+        android:inputType="numberDecimal"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"/>
+    <TextView
+        android:id="@+id/textTipType"
+        android:layout_below="@+id/editCheck"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:text="Please select your tip type"/>
+    <RadioGroup
+        android:id="@+id/radTipType"
+        android:layout_below="@+id/textTipType"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        <RadioButton
+            android:id="@+id/radPro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTipType"
+            android:buttonTint="@android:color/background_light"
+            android:checked="true"
+            android:text="Procent"
+            android:textColor="@android:color/white" android:textSize="14sp"/>
+        <RadioButton
+            android:id="@+id/radNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTipType"
+            android:buttonTint="@android:color/background_light"
+            android:text="Cash"
+            android:textColor="@android:color/white" android:textSize="14sp"/>
+    </RadioGroup>
+    <EditText
+        android:id="@+id/editTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radTipType"
+        android:hint="0%"
+        android:textColorHint="@android:color/darker_gray"
+        android:layout_marginTop="5dp"
+        android:inputType="numberDecimal"
+        android:background="@android:color/transparent"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"/>
+    <Button
+        android:id="@+id/butFinal"
+        android:layout_below="@+id/editTip"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:text="Total"/>
+    <TextView
+        android:id="@+id/textTotal"
+        android:layout_below="@+id/butFinal"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:text="Total Bill: "/>
+</RelativeLayout>
